@@ -1,0 +1,108 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>修改信息</title>
+  <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
+  <meta name="author" content="Vincent Garreau" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" media="screen" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+</head><script src="jquery-1.12.3.js"></script>
+<script>
+function test(){
+var yhm=document.getElementById("yhm").value;
+var mm=document.getElementById("mm").value;
+var qrmm=document.getElementById("qrmm").value;
+var dh=document.getElementById("dh").value;
+
+//用户名
+if(yhm==""){
+document.myForm.yhm.focus();
+alert("用户名不能为空！！");return false;}
+else if(!/^[\u4e00-\u9fa5]+$/.test(yhm)){   
+document.myForm.yhm.focus();
+alert("用户名格式不正确!!");return false;} 
+//密码
+else if(mm==""){
+document.myForm.mm.focus();
+alert("密码不能为空！！");return false;}
+else if(!/^\d{9}$/.test(mm)){
+document.myForm.mm.focus();
+alert("请输入9位数字密码!!");return false;}
+//确认密码
+else if(qrmm==""){
+document.myForm.qrmm.focus();
+alert("确认密码不能为空！！");return false;}
+else if(qrmm!=mm){
+document.myForm.qrmm.focus();
+alert("密码不相同!!");return false;}
+//电话
+else if(dh==""){
+document.myForm.qrmm.focus();
+alert("电话不能为空！！");return false;}
+//性别
+if(!nan.checked&&!nv.checked)
+{alert("请选择性别！！");return false;}
+
+//成功注册
+else alert("恭喜"+yhm+"注册成功！！");window.close()}
+</script>
+<body>
+
+<div id="particles-js">
+		<div class="login">
+			<div class="login-top">
+				个人资料
+			</div>
+			<div class="login-center clearfix">
+				<div class="login-center-img"><img src="img/name.png"/></div>
+				<div class="login-center-input">
+					<input type="text" id="yhm"  placeholder="admin" onfocus="this.placeholder=''" onblur="this.placeholder='请输入您的用户名'"/>
+					<div class="login-center-input-text">用户名</div>
+				
+				
+			</div>
+			<div class="login-left clearfix">
+				<div class="login-center-img"><img src="img/password.png"/></div>
+				<div class="login-center-input">
+					<input type="password" id="mm"  placeholder="123456" onfocus="this.placeholder=''" onblur="this.placeholder='请输入您的密码'"/>
+					<div class="login-center-input-text">密码</div>
+				
+				</div>
+<div class="login-left clearfix">
+				<div class="login-center-img"><img src="img/password.png"/></div>
+				<div class="login-center-input">
+					<input type="password" id="qrmm"  placeholder="223456" onfocus="this.placeholder=''" onblur="this.placeholder='请重新输入您的密码'"/>
+					<div class="login-center-input-text">重新输入密码</div>
+				</div><div class="login-left clearfix">
+				<div class="login-center-img"><img src="img/phone.jpg"/></div>
+				<div class="login-center-input">
+					<input type="password" id="dh"  placeholder="18874224895" onfocus="this.placeholder=''" onblur="this.placeholder='请输入您的电话'"/>
+					<div class="login-center-input-text">电话</div>
+				</div><br/>
+                               <div class="login-left clearfix">
+				<div class="login-center-img"><img src="img/sex.jpg"/></div>
+				<div class="login-center-input">
+					<input type="password" id="dh"  placeholder="男" onfocus="this.placeholder=''" onblur="this.placeholder='请输入您的电话'"/>
+					<div class="login-center-input-text">电话</div>
+				</div><br/>
+
+			</div>
+			<div class="login-button">
+				<input type="submit"name="zc"id="zc"value="修改"/>
+			</div>
+		</div>
+		<div class="sk-rotating-plane"></div>
+</div>
+
+<!-- scripts -->
+<script src="js/particles.min.js"></script>
+<script src="js/app.js"></script>
+
+<div style="text-align:center;">
+</div>
+</body>
+</html>
